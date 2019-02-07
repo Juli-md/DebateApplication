@@ -9,7 +9,6 @@ namespace DebateCore.Model
         public Person Player2 { get; set; }
         public DateTime DateTimeRegistration { get; set; }
         public bool IsJudge { get; set; }
-		public List<Person> Wing { get; set; }
 		public string Comment { get; set; }
 		public Language Language { get; set; }
 	}
