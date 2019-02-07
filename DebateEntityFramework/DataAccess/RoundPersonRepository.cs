@@ -17,6 +17,7 @@ namespace DebateEntityFramework.DataAccess
 
 		public void Add(RoundPerson item)
 		{
+			item.CreatedDate = DateTime.Now;
 			db.Add(item);
 			db.SaveChanges();
 		}
@@ -42,17 +43,16 @@ namespace DebateEntityFramework.DataAccess
 		public void Remove(int id)
 		{
 			var roundPerson = db.RoundPersons.Single(t => t.Id == id);
+			roundPerson.ModifiedDate = DateTime.Now;
 			roundPerson.Deleted = true;
 			db.RoundPersons.Update(roundPerson);
 			db.SaveChanges();
 		}
 
-		public void Update(RoundPerson item)
+		public void Update(RoundPerson roundPerson)
 		{
-			var roundPerson = db.RoundPersons.Single(t => t.Id == item.Id);
-			roundPerson.Deleted = true;
+			roundPerson.ModifiedDate = DateTime.Now;
 			db.RoundPersons.Update(roundPerson);
-			db.Add(item);
 			db.SaveChanges();
 		}
 	}

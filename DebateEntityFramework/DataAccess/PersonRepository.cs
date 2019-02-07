@@ -17,6 +17,7 @@ namespace DebateEntityFramework.DataAccess
 
 		public void Add(Person item)
 		{
+			item.CreatedDate = DateTime.Now;
 			db.Add(item);
 			db.SaveChanges();
 		}
@@ -42,17 +43,16 @@ namespace DebateEntityFramework.DataAccess
 		public void Remove(int id)
 		{
 			var person = db.Persons.Single(t => t.Id == id);
+			person.ModifiedDate = DateTime.Now;
 			person.Deleted = true;
 			db.Persons.Update(person);
 			db.SaveChanges();
 		}
 
-		public void Update(Person item)
+		public void Update(Person person)
 		{
-			var person = db.Persons.Single(t => t.Id == item.Id);
-			person.Deleted = true;
+			person.ModifiedDate = DateTime.Now;
 			db.Persons.Update(person);
-			db.Add(item);
 			db.SaveChanges();
 		}
 	}
