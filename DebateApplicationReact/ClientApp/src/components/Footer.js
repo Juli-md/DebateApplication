@@ -3,7 +3,7 @@ import { Container } from 'reactstrap';
 
 
 
-export function Footer(props) {
+export const Footer = (props) => {
     return (
         <footer className='border-top'>
             <Container>
