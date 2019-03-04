@@ -2,8 +2,10 @@
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home';
-import { FetchData } from './components/FetchData';
-import { Counter } from './components/Counter';
+import { InputResults } from './components/InputResults';
+import { Registration } from './components/Registration';
+import { ViewResults } from './components/ViewResults';
+import { Statistics } from './components/Statistics';
 
 export default class App extends Component {
   static displayName = App.name;
@@ -12,8 +14,10 @@ export default class App extends Component {
     return (
       <Layout>
         <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
-        <Route path='/fetch-data' component={FetchData} />
+        <Route path='/registration' component={Registration} />
+            <Route path='/input-results' component={InputResults} />
+            <Route path='/vew-results' component={ViewResults} />
+            <Route path='/statistics' component={Statistics} />
       </Layout>
     );
   }
