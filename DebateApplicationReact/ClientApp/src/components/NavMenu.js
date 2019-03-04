@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
@@ -24,20 +24,23 @@ export class NavMenu extends Component {
   render () {
     return (
       <header>
-        <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
-          <Container>
-            <NavbarBrand tag={Link} to="/">DebateApplicationReact</NavbarBrand>
-            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-            <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
+            <Navbar className="navbar-expand-lg navbar-toggleable-lg fixed-top border-bottom box-shadow mb-3 navbar-dark bg-dark" >
+                <Container>
+                  <NavbarBrand tag={Link} to="/">Клуб дебатов</NavbarBrand>
+                <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+                <Collapse className="d-lg-inline-flex " isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow">
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
+                                <NavLink tag={Link} className="text-white mx-2" to="/">Зарегистрироваться на раунд</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
+                                <NavLink tag={Link} className="text-white mx-2" to="/counter">Внести результаты</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
+                                <NavLink tag={Link} className="text-white mx-2" to="/fetch-data">Посмотреть результаты</NavLink>
+                </NavItem>
+                <NavItem>
+                                <NavLink tag={Link} className="text-white mx-2" to="/fetch-data">Статистика</NavLink>
                 </NavItem>
               </ul>
             </Collapse>
