@@ -1,11 +1,21 @@
 ﻿import React, { Component } from 'react';
+import { Route } from 'react-router';
+import { InputResults } from './components/InputResults';
+import { HomeLayout } from './components/HomeLayout';
+
+import { Profile } from './components/Profile';
+
+
 
 export class Home extends Component {
   static displayName = Home.name;
 
   render () {
     return (
-      <div>
+        <div>
+            <HomeLayout>
+                <Route exact path='/' component={Profile} />
+            </HomeLayout>
         <h1>Hello, world!</h1>
         <p>Welcome to your new single-page application, built with:</p>
         <ul>
