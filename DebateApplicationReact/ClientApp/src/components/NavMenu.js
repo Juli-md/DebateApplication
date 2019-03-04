@@ -24,23 +24,23 @@ export class NavMenu extends Component {
   render () {
     return (
       <header>
-            <Navbar className="navbar-expand-lg navbar-toggleable-lg fixed-top border-bottom box-shadow mb-3 navbar-dark bg-dark" >
+            <Navbar className="navbar-expand-lg navbar-toggleable-lg  border-bottom box-shadow mb-3 navbar-dark bg-dark" >
                 <Container>
                   <NavbarBrand tag={Link} to="/">Клуб дебатов</NavbarBrand>
                 <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                 <Collapse className="d-lg-inline-flex " isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow">
                 <NavItem>
-                                <NavLink tag={Link} className="text-white mx-2" to="/">Зарегистрироваться на раунд</NavLink>
+                                <NavLink tag={Link} className="mx-2" to="/registration">Зарегистрироваться на раунд</NavLink>
                 </NavItem>
                 <NavItem>
-                                <NavLink tag={Link} className="text-white mx-2" to="/counter">Внести результаты</NavLink>
+                                <NavLink tag={Link} className="mx-2" to="/input-results">Внести результаты</NavLink>
                 </NavItem>
                 <NavItem>
-                                <NavLink tag={Link} className="text-white mx-2" to="/fetch-data">Посмотреть результаты</NavLink>
+                                <NavLink tag={Link} className="mx-2" to="/view-results">Посмотреть результаты</NavLink>
                 </NavItem>
                 <NavItem>
-                                <NavLink tag={Link} className="text-white mx-2" to="/fetch-data">Статистика</NavLink>
+                                <NavLink tag={Link} className="mx-2" to="/statistics">Статистика</NavLink>
                 </NavItem>
               </ul>
             </Collapse>
