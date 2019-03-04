@@ -15,9 +15,9 @@ export default class App extends Component {
       <Layout>
         <Route exact path='/' component={Home} />
         <Route path='/registration' component={Registration} />
-            <Route path='/input-results' component={InputResults} />
-            <Route path='/vew-results' component={ViewResults} />
-            <Route path='/statistics' component={Statistics} />
+        <Route path='/input-results' component={InputResults} />
+        <Route path='/view-results' component={ViewResults} />
+        <Route path='/statistics' component={Statistics} />
       </Layout>
     );
   }
