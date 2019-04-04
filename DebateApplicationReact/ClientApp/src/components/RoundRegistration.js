@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-export class Registration extends Component {
-  static displayName = Registration.name;
+export class RoundRegistration extends Component {
+  static displayName = RoundRegistration.name;
 
   constructor (props) {
     super(props);

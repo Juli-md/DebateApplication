@@ -29,9 +29,9 @@ export class NavMenu extends Component {
                   <NavbarBrand tag={Link} to="/">Клуб дебатов</NavbarBrand>
                 <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                 <Collapse className="d-lg-inline-flex " isOpen={!this.state.collapsed} navbar>
-              <ul className="navbar-nav flex-grow">
+              <ul className="navbar-nav justify-content-between">
                 <NavItem>
-                                <NavLink tag={Link} className="mx-2" to="/registration">Зарегистрироваться на раунд</NavLink>
+                                <NavLink tag={Link} className="mx-2" to="/round-registration">Зарегистрироваться на раунд</NavLink>
                 </NavItem>
                 <NavItem>
                                 <NavLink tag={Link} className="mx-2" to="/input-results">Внести результаты</NavLink>
@@ -41,6 +41,13 @@ export class NavMenu extends Component {
                 </NavItem>
                 <NavItem>
                                 <NavLink tag={Link} className="mx-2" to="/statistics">Статистика</NavLink>
+                 </NavItem>
+                   
+                <NavItem>
+                                <NavLink tag={Link} className="mx-2" to="/log-in">Войти</NavLink>
+                </NavItem>
+                <NavItem>
+                                <NavLink tag={Link} className="mx-2" to="/sign-up">Зарегистрироваться</NavLink>
                 </NavItem>
               </ul>
             </Collapse>

@@ -9,7 +9,7 @@ export class HomeMenu extends Component {
         
         this.setState({ activeItem: name }, () => {
             this.props.func(this.state.activeItem)
-            console.log('menu', this.state.activeItem)}
+            }
         )
         
         

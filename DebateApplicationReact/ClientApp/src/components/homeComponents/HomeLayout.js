@@ -12,7 +12,7 @@ export class HomeLayout extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            activeItem: 'профиль'
+            activeItem: 'профиль'  // if this.state == выйти -- return  не сегмент, а другое
         }
         this.changeActiveItem = this.changeActiveItem.bind(this)
     }
