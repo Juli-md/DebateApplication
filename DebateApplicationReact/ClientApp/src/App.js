@@ -8,6 +8,7 @@ import { ViewResults } from './components/ViewResults';
 import { Statistics } from './components/Statistics';
 import { LogIn } from './components/LogIn';
 import { SignUp } from './components/SignUp';
+import { FormikSignUp } from './components/SignUp';
 
 
 export default class App extends Component {
@@ -22,7 +23,7 @@ export default class App extends Component {
         <Route path='/view-results' component={ViewResults} />
         <Route path='/statistics' component={Statistics} />
         <Route path='/log-in' component={LogIn} />
-        <Route path='/sign-up' component={SignUp} />
+            <Route path='/sign-up' component={FormikSignUp} />
       </Layout>
     );
   }
